@@ -81,7 +81,9 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
-    "integration-test": "start-server-and-test 'serve build -l 3000' http://localhost:3000 'cypress run'"
+    "integration-test": "start-server-and-test 'serve build -l 3000' http://localhost:3000 'cypress run'",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -98,5 +100,9 @@
       "last 1 safari version"
     ]
   },
-  "license": "GPL-3.0-or-later"
+  "license": "GPL-3.0-or-later",
+  "snyk": true,
+  "dependencies": {
+    "@snyk/protect": "latest"
+  }
 }

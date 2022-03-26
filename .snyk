@@ -1,0 +1,8 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.22.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - '@web3-react/portis-connector > @portis/web3 > @portis/web3-provider-engine > eth-json-rpc-infura > json-rpc-engine > babelify > babel-core > babel-register > lodash':
+        patched: '2022-03-26T21:26:36.830Z'
